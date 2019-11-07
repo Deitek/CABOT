@@ -3,38 +3,59 @@
   
   <meta charset="UTF-8">
   <title>CABOT</title>
-
   
+    <style type="text/css">
+      h4{color:#666}.background-grey{background:#f5f5f5}
+      .border--thin-grey{border:1px solid #e2e1e1;margin-bottom:10px}
+      .padding--10{padding:10px}
+      .ph-link{color:#da552f}
+      #settings-btn{cursor:pointer}
+      #settings-btn svg:hover{fill:#444!important}
+    </style>
+  </head>
   
-  <style type="text/css">h4{color:#666}.background-grey{background:#f5f5f5}.border--thin-grey{border:1px solid #e2e1e1;margin-bottom:10px}.padding--10{padding:10px}.ph-link{color:#da552f}#settings-btn{cursor:pointer}#settings-btn svg:hover{fill:#444!important}</style>
-</head><body style="width: 400px;">
-<div class="background-grey padding--10">
-<h2><img src="img/Cabot128.png" style="vertical-align: middle;" width="50"> CABOT<span id="shortName" style="color: rgb(255, 27, 102);"></span></h2>
-</div>
+  <body style="width: 400px;">
+      <div class="background-grey padding--10">
+        <img src="img/Cabot128.png" style="vertical-align: middle; margin-left: 40%;     background: darkslategrey; border-radius: 50px;" width="50">
+        <h2 style="text-align: center;">Hello! I'm your intelligent assistant. My Name is CABOT<span id="shortName" style="color: rgb(255, 27, 102);"></span></h2>
+      </div>  
+    <div style="margin-top: 20px;">
+      <span id="indexWorksOnly">Works <span style="font-style: italic;">for any Website URL</span></span><i>/*</i>
+    </div>
 
-<div><span id="indexWorksOnly">Works <span style="font-style: italic;">for
-any Website URL</span></span><i>/*</i></div>
+    <div class="background-grey border--thin-grey" style="padding: 10px">
+      <span id="indexCountsFrom">Make the questions to the CABOT. He will help you find the website content more easily</span>
+      <ol>
+        <li id="indexProjectPage">Write a Question</li>
+        <li id="indexSearchPage">Read the response of CABOT</li>
+        <li id="indexSearchPage">Follow the steps or write again a new question</li>
+      </ol>
+      <div style="background: darkslategrey; height: 40px; color: white; font-weight: 600; padding: 10px; border-radius: 20px;">
+        <p id="response-cabot">Waiting for your question</p>
+      </div>
+    </div>
 
-<div class="background-grey border--thin-grey" style="padding: 10px 0pt;"><span id="indexCountsFrom">Search all the
-ocurrencies in the same Domain, and as result list the ocurrencies with
-all the related Links:</span>
-<ol>
-  <li id="indexProjectPage">Github project detail page</li>
-  <li id="indexSearchPage">search results page</li>
-</ol>
-</div>
+    <div align="center"> 
+      <textarea style="width: 80%; resize: none; margin-bottom: 10px; padding: 20px;
+      border-radius: 20px; font-family: 'Montserrat', sans-serif; background: #D8D3cc; border: none;" class="new-message=" placeholder="Write your question"></textarea>
+      <input id="button-send" class="btn" type="submit" style="font-size: 16px; width: 100px; height: 30px;
+      border-radius: 20px; border: none; background: #EC7263; color: white; font-weight: 600; cursor: pointer;">
+    </div>
 
-<div align="center"> <textarea style="width: 100%;" ;="" class="new-message="></textarea>
-<input class="btn" type="submit"></div>
+    <div>
+      <p><b>Actual URL:</b></p>
+      <p id="url-web"></p>
+    </div>
 
-<div class="background-grey border--thin-grey" style="height: 300px;" align="center">
-<h3 id="results">Query Results</h3>
-</div>
+    <!--<div class="background-grey border--thin-grey" style="height: 300px;" align="center">
+      <h3 id="results">Query Results</h3>
+    </div>
 
-<div align="center">
-<a id="translateOurApp" href="https://www.github.com/Deitek" target="_blank">Help us to
-improve this</a>
-</div>
+    <div align="center">
+      <a id="translateOurApp" href="https://www.github.com/Deitek" target="_blank">Help us to
+      improve this</a>
+    </div>-->
 
-<script type="text/javascript" src="src/popup.js"></script>
-</body></html>
+    <script type="text/javascript" src="src/popup.js"></script>
+  </body>
+</html>
