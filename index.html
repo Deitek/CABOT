@@ -15,31 +15,31 @@
   </head>
   
   <body style="width: 400px;">
-      <div class="background-grey padding--10">
+      <div class="background-grey padding--10" style="background: linear-gradient(to right, rgba(73,155,234,1) 30%, rgba(73,155,234,1) 41%, rgba(6,163,254,1) 52%, rgba(85,177,228,1) 58%, rgba(85,177,228,1) 78%); color: white;">
         <img src="img/Cabot128.png" style="vertical-align: middle; margin-left: 40%;     background: darkslategrey; border-radius: 50px;" width="50">
-        <h2 style="text-align: center;">Hello! I'm your intelligent assistant. My Name is CABOT<span id="shortName" style="color: rgb(255, 27, 102);"></span></h2>
+        <h3 style="text-align: center;">Hello! I'm your intelligent assistant. My Name is CABOT<span id="shortName" style="color: rgb(255, 27, 102);"></span></h3>
       </div>  
-    <div style="margin-top: 20px;">
+    <div style="margin-top: 10px;">
       <span id="indexWorksOnly">Works <span style="font-style: italic;">for any Website URL</span></span><i>/*</i>
     </div>
 
-    <div class="background-grey border--thin-grey" style="padding: 10px">
+    <div class="background-grey border--thin-grey" style="padding: 10px; margin-top: 10px; border: solid rgb(85,177,228); border-radius: 10px;">
       <span id="indexCountsFrom">Make the questions to the CABOT. He will help you find the website content more easily</span>
       <ol>
         <li id="indexProjectPage">Write a Question</li>
         <li id="indexSearchPage">Read the response of CABOT</li>
         <li id="indexSearchPage">Follow the steps or write again a new question</li>
       </ol>
-      <div style="background: darkslategrey; height: 40px; color: white; font-weight: 600; padding: 10px; border-radius: 20px;">
-        <p id="response-cabot">Waiting for your question</p>
+      <div align="center"> 
+        <textarea style="width: 80%; resize: none; margin-bottom: 10px; padding: 15px;
+        border-radius: 20px; font-family: 'Montserrat', sans-serif; background: #D8D3cc; border: none;" class="new-message=" placeholder="Write your question" id="message"></textarea>
+        <input id="button-send" class="btn" type="submit" style="font-size: 16px; width: 100px; height: 30px;
+        border-radius: 20px; border: none; background: rgba(73,155,234,1); color: white; font-weight: 600; cursor: pointer;">
       </div>
     </div>
 
-    <div align="center"> 
-      <textarea style="width: 80%; resize: none; margin-bottom: 10px; padding: 20px;
-      border-radius: 20px; font-family: 'Montserrat', sans-serif; background: #D8D3cc; border: none;" class="new-message=" placeholder="Write your question"></textarea>
-      <input id="button-send" class="btn" type="submit" style="font-size: 16px; width: 100px; height: 30px;
-      border-radius: 20px; border: none; background: #EC7263; color: white; font-weight: 600; cursor: pointer;">
+    <div style="background: darkslategrey; height: 80px; color: white; font-weight: 600; padding: 10px; border-radius: 20px; overflow-y: scroll;">
+      <p id="response-cabot">Waiting for your question</p>
     </div>
 
     <div>
