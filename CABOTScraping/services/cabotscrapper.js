@@ -4,10 +4,10 @@ const request = require('request');
 const fetch = require("node-fetch");
 
 
-var scrapePage = function(url) {
+var scrapePage = function(url, question) {
 
     //window.location.hostname;//window.location.href;//window.location.hostname;
-    const pageURL = url
+    const pageURL = url;
 
     //make an HTTP request for the page to be scraped
     request(pageURL, function(error, response, responseHtml){
@@ -28,12 +28,35 @@ var scrapePage = function(url) {
                     });
 
                     var t = $('html *').contents().map(function () {
-                        return (this.name === 'p') ? $(this).html() : '';
+                        var parrafo = (this.name === 'p') ? $(this).text() : '';
+                        parrafo.replace(/(<([^>]+)>)/ig, '');
+                        return parrafo
                     }).get().join(' ');
-                    console.log(t);
                     //write the Text to the local file system
                     fs.writeFile('./HTML/data-clear.txt', t, function (err) {
-                        console.log(err);
+                        if(err===null){
+                            var json = {
+                                "utterances":[
+                                    {
+                                        "link":"101",
+                                        "searchSentence":question,
+                                        "inputDoc":t,
+                                        "prob": null
+                                    }
+                                ]
+                            }
+
+                            let response = fetch("http://127.0.0.1:5000/textsimilarity/v1", {
+                                method: 'POST',
+                                headers: {
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({data: json})
+                            });
+
+                            response.then((x)=> console.log(x)) 
+                        }
                     });
 
                 }
@@ -42,7 +65,7 @@ var scrapePage = function(url) {
             //write isolated sections of the entire scraped page to the local file system
 
             //create the cheerio object
-            const $ = cheerio.load(responseHtml),
+            /*const $ = cheerio.load(responseHtml),
                 //create a reference to the header element
                 $header = $('header').html(),
                 $content = $('#mainContent').html(),
@@ -58,7 +81,7 @@ var scrapePage = function(url) {
             //write the footer to the local file system
             fs.writeFile(__dirname + '/HTML/footer.html', $footer, function(err){
                 console.log('footer.html successfully written to HTML folder');
-            });
+            });*/
         }
         else if (error) {
             //Return Error

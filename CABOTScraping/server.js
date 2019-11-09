@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 
 app.post('/scrapping', function(req, res) {
   console.log("Ejecute el servicio", req.body.url);
-  cabotScrapper.scrapePage(req.body.url);
+  cabotScrapper.scrapePage(req.body.url, req.body.question);
   res.send('Servicio scrapping activado');
 });
 
