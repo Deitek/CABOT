@@ -1,3 +1,148 @@
-!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=3)}({3:function(e,t){chrome.runtime.onInstalled.addListener(function(e){if("install"===e.reason)chrome.runtime.openOptionsPage();else if("update"===e.reason){var t=chrome.runtime.getManifest().version,n="GitHub Gloc updated from "+e.previousVersion+" to "+t+".\n\t\t\t\n - small fixes \n - moved into TypeScript";console.info(n)}})}});
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vd2VicGFjay9ib290c3RyYXAiLCJ3ZWJwYWNrOi8vLy4vc3JjL2JhY2tncm91bmQudHMiXSwibmFtZXMiOlsiaW5zdGFsbGVkTW9kdWxlcyIsIl9fd2VicGFja19yZXF1aXJlX18iLCJtb2R1bGVJZCIsImV4cG9ydHMiLCJtb2R1bGUiLCJpIiwibCIsIm1vZHVsZXMiLCJjYWxsIiwibSIsImMiLCJkIiwibmFtZSIsImdldHRlciIsIm8iLCJPYmplY3QiLCJkZWZpbmVQcm9wZXJ0eSIsImVudW1lcmFibGUiLCJnZXQiLCJyIiwiU3ltYm9sIiwidG9TdHJpbmdUYWciLCJ2YWx1ZSIsInQiLCJtb2RlIiwiX19lc01vZHVsZSIsIm5zIiwiY3JlYXRlIiwia2V5IiwiYmluZCIsIm4iLCJvYmplY3QiLCJwcm9wZXJ0eSIsInByb3RvdHlwZSIsImhhc093blByb3BlcnR5IiwicCIsInMiLCIzIiwiZSIsImNocm9tZSIsInJ1bnRpbWUiLCJvbkluc3RhbGxlZCIsImFkZExpc3RlbmVyIiwiZGV0YWlscyIsInJlYXNvbiIsIm9wZW5PcHRpb25zUGFnZSIsInRoaXNWZXJzaW9uIiwiZ2V0TWFuaWZlc3QiLCJ2ZXJzaW9uIiwic3RhdHVzTXNnIiwicHJldmlvdXNWZXJzaW9uIiwiY29uc29sZSIsImluZm8iXSwibWFwcGluZ3MiOiJhQUNBLElBQUFBLEVBQUEsR0FHQSxTQUFBQyxFQUFBQyxHQUdBLEdBQUFGLEVBQUFFLEdBQ0EsT0FBQUYsRUFBQUUsR0FBQUMsUUFHQSxJQUFBQyxFQUFBSixFQUFBRSxHQUFBLENBQ0FHLEVBQUFILEVBQ0FJLEdBQUEsRUFDQUgsUUFBQSxJQVVBLE9BTkFJLEVBQUFMLEdBQUFNLEtBQUFKLEVBQUFELFFBQUFDLElBQUFELFFBQUFGLEdBR0FHLEVBQUFFLEdBQUEsRUFHQUYsRUFBQUQsUUFLQUYsRUFBQVEsRUFBQUYsRUFHQU4sRUFBQVMsRUFBQVYsRUFHQUMsRUFBQVUsRUFBQSxTQUFBUixFQUFBUyxFQUFBQyxHQUNBWixFQUFBYSxFQUFBWCxFQUFBUyxJQUNBRyxPQUFBQyxlQUFBYixFQUFBUyxFQUFBLENBQTBDSyxZQUFBLEVBQUFDLElBQUFMLEtBSzFDWixFQUFBa0IsRUFBQSxTQUFBaEIsR0FDQSxvQkFBQWlCLGVBQUFDLGFBQ0FOLE9BQUFDLGVBQUFiLEVBQUFpQixPQUFBQyxZQUFBLENBQXdEQyxNQUFBLFdBRXhEUCxPQUFBQyxlQUFBYixFQUFBLGNBQWlEbUIsT0FBQSxLQVFqRHJCLEVBQUFzQixFQUFBLFNBQUFELEVBQUFFLEdBRUEsR0FEQSxFQUFBQSxJQUFBRixFQUFBckIsRUFBQXFCLElBQ0EsRUFBQUUsRUFBQSxPQUFBRixFQUNBLEtBQUFFLEdBQUEsaUJBQUFGLFFBQUFHLFdBQUEsT0FBQUgsRUFDQSxJQUFBSSxFQUFBWCxPQUFBWSxPQUFBLE1BR0EsR0FGQTFCLEVBQUFrQixFQUFBTyxHQUNBWCxPQUFBQyxlQUFBVSxFQUFBLFdBQXlDVCxZQUFBLEVBQUFLLFVBQ3pDLEVBQUFFLEdBQUEsaUJBQUFGLEVBQUEsUUFBQU0sS0FBQU4sRUFBQXJCLEVBQUFVLEVBQUFlLEVBQUFFLEVBQUEsU0FBQUEsR0FBZ0gsT0FBQU4sRUFBQU0sSUFBcUJDLEtBQUEsS0FBQUQsSUFDckksT0FBQUYsR0FJQXpCLEVBQUE2QixFQUFBLFNBQUExQixHQUNBLElBQUFTLEVBQUFULEtBQUFxQixXQUNBLFdBQTJCLE9BQUFyQixFQUFBLFNBQzNCLFdBQWlDLE9BQUFBLEdBRWpDLE9BREFILEVBQUFVLEVBQUFFLEVBQUEsSUFBQUEsR0FDQUEsR0FJQVosRUFBQWEsRUFBQSxTQUFBaUIsRUFBQUMsR0FBc0QsT0FBQWpCLE9BQUFrQixVQUFBQyxlQUFBMUIsS0FBQXVCLEVBQUFDLElBR3REL0IsRUFBQWtDLEVBQUEsR0FJQWxDLElBQUFtQyxFQUFBLEtBQUFDLEVBQUEsU0FBQUMsRUFBQWYsR0NsRkFnQixPQUFPQyxRQUFRQyxZQUFZQyxZQUFZLFNBQUNDLEdBQ3ZDLEdBQXVCLFlBQW5CQSxFQUFRQyxPQUNYTCxPQUFPQyxRQUFRSyx1QkFDVCxHQUF1QixXQUFuQkYsRUFBUUMsT0FBcUIsQ0FDdkMsSUFBTUUsRUFBY1AsT0FBT0MsUUFBUU8sY0FBY0MsUUFFM0NDLEVBQVksNEJBQTRCTixFQUFRTyxnQkFBZSxPQUFPSixFQUFXLHVEQUd2RkssUUFBUUMsS0FBS0giLCJmaWxlIjoiYmFja2dyb3VuZC5qcyIsInNvdXJjZXNDb250ZW50IjpbIiBcdC8vIFRoZSBtb2R1bGUgY2FjaGVcbiBcdHZhciBpbnN0YWxsZWRNb2R1bGVzID0ge307XG5cbiBcdC8vIFRoZSByZXF1aXJlIGZ1bmN0aW9uXG4gXHRmdW5jdGlvbiBfX3dlYnBhY2tfcmVxdWlyZV9fKG1vZHVsZUlkKSB7XG5cbiBcdFx0Ly8gQ2hlY2sgaWYgbW9kdWxlIGlzIGluIGNhY2hlXG4gXHRcdGlmKGluc3RhbGxlZE1vZHVsZXNbbW9kdWxlSWRdKSB7XG4gXHRcdFx0cmV0dXJuIGluc3RhbGxlZE1vZHVsZXNbbW9kdWxlSWRdLmV4cG9ydHM7XG4gXHRcdH1cbiBcdFx0Ly8gQ3JlYXRlIGEgbmV3IG1vZHVsZSAoYW5kIHB1dCBpdCBpbnRvIHRoZSBjYWNoZSlcbiBcdFx0dmFyIG1vZHVsZSA9IGluc3RhbGxlZE1vZHVsZXNbbW9kdWxlSWRdID0ge1xuIFx0XHRcdGk6IG1vZHVsZUlkLFxuIFx0XHRcdGw6IGZhbHNlLFxuIFx0XHRcdGV4cG9ydHM6IHt9XG4gXHRcdH07XG5cbiBcdFx0Ly8gRXhlY3V0ZSB0aGUgbW9kdWxlIGZ1bmN0aW9uXG4gXHRcdG1vZHVsZXNbbW9kdWxlSWRdLmNhbGwobW9kdWxlLmV4cG9ydHMsIG1vZHVsZSwgbW9kdWxlLmV4cG9ydHMsIF9fd2VicGFja19yZXF1aXJlX18pO1xuXG4gXHRcdC8vIEZsYWcgdGhlIG1vZHVsZSBhcyBsb2FkZWRcbiBcdFx0bW9kdWxlLmwgPSB0cnVlO1xuXG4gXHRcdC8vIFJldHVybiB0aGUgZXhwb3J0cyBvZiB0aGUgbW9kdWxlXG4gXHRcdHJldHVybiBtb2R1bGUuZXhwb3J0cztcbiBcdH1cblxuXG4gXHQvLyBleHBvc2UgdGhlIG1vZHVsZXMgb2JqZWN0IChfX3dlYnBhY2tfbW9kdWxlc19fKVxuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5tID0gbW9kdWxlcztcblxuIFx0Ly8gZXhwb3NlIHRoZSBtb2R1bGUgY2FjaGVcbiBcdF9fd2VicGFja19yZXF1aXJlX18uYyA9IGluc3RhbGxlZE1vZHVsZXM7XG5cbiBcdC8vIGRlZmluZSBnZXR0ZXIgZnVuY3Rpb24gZm9yIGhhcm1vbnkgZXhwb3J0c1xuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5kID0gZnVuY3Rpb24oZXhwb3J0cywgbmFtZSwgZ2V0dGVyKSB7XG4gXHRcdGlmKCFfX3dlYnBhY2tfcmVxdWlyZV9fLm8oZXhwb3J0cywgbmFtZSkpIHtcbiBcdFx0XHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgbmFtZSwgeyBlbnVtZXJhYmxlOiB0cnVlLCBnZXQ6IGdldHRlciB9KTtcbiBcdFx0fVxuIFx0fTtcblxuIFx0Ly8gZGVmaW5lIF9fZXNNb2R1bGUgb24gZXhwb3J0c1xuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5yID0gZnVuY3Rpb24oZXhwb3J0cykge1xuIFx0XHRpZih0eXBlb2YgU3ltYm9sICE9PSAndW5kZWZpbmVkJyAmJiBTeW1ib2wudG9TdHJpbmdUYWcpIHtcbiBcdFx0XHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgU3ltYm9sLnRvU3RyaW5nVGFnLCB7IHZhbHVlOiAnTW9kdWxlJyB9KTtcbiBcdFx0fVxuIFx0XHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgJ19fZXNNb2R1bGUnLCB7IHZhbHVlOiB0cnVlIH0pO1xuIFx0fTtcblxuIFx0Ly8gY3JlYXRlIGEgZmFrZSBuYW1lc3BhY2Ugb2JqZWN0XG4gXHQvLyBtb2RlICYgMTogdmFsdWUgaXMgYSBtb2R1bGUgaWQsIHJlcXVpcmUgaXRcbiBcdC8vIG1vZGUgJiAyOiBtZXJnZSBhbGwgcHJvcGVydGllcyBvZiB2YWx1ZSBpbnRvIHRoZSBuc1xuIFx0Ly8gbW9kZSAmIDQ6IHJldHVybiB2YWx1ZSB3aGVuIGFscmVhZHkgbnMgb2JqZWN0XG4gXHQvLyBtb2RlICYgOHwxOiBiZWhhdmUgbGlrZSByZXF1aXJlXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLnQgPSBmdW5jdGlvbih2YWx1ZSwgbW9kZSkge1xuIFx0XHRpZihtb2RlICYgMSkgdmFsdWUgPSBfX3dlYnBhY2tfcmVxdWlyZV9fKHZhbHVlKTtcbiBcdFx0aWYobW9kZSAmIDgpIHJldHVybiB2YWx1ZTtcbiBcdFx0aWYoKG1vZGUgJiA0KSAmJiB0eXBlb2YgdmFsdWUgPT09ICdvYmplY3QnICYmIHZhbHVlICYmIHZhbHVlLl9fZXNNb2R1bGUpIHJldHVybiB2YWx1ZTtcbiBcdFx0dmFyIG5zID0gT2JqZWN0LmNyZWF0ZShudWxsKTtcbiBcdFx0X193ZWJwYWNrX3JlcXVpcmVfXy5yKG5zKTtcbiBcdFx0T2JqZWN0LmRlZmluZVByb3BlcnR5KG5zLCAnZGVmYXVsdCcsIHsgZW51bWVyYWJsZTogdHJ1ZSwgdmFsdWU6IHZhbHVlIH0pO1xuIFx0XHRpZihtb2RlICYgMiAmJiB0eXBlb2YgdmFsdWUgIT0gJ3N0cmluZycpIGZvcih2YXIga2V5IGluIHZhbHVlKSBfX3dlYnBhY2tfcmVxdWlyZV9fLmQobnMsIGtleSwgZnVuY3Rpb24oa2V5KSB7IHJldHVybiB2YWx1ZVtrZXldOyB9LmJpbmQobnVsbCwga2V5KSk7XG4gXHRcdHJldHVybiBucztcbiBcdH07XG5cbiBcdC8vIGdldERlZmF1bHRFeHBvcnQgZnVuY3Rpb24gZm9yIGNvbXBhdGliaWxpdHkgd2l0aCBub24taGFybW9ueSBtb2R1bGVzXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLm4gPSBmdW5jdGlvbihtb2R1bGUpIHtcbiBcdFx0dmFyIGdldHRlciA9IG1vZHVsZSAmJiBtb2R1bGUuX19lc01vZHVsZSA/XG4gXHRcdFx0ZnVuY3Rpb24gZ2V0RGVmYXVsdCgpIHsgcmV0dXJuIG1vZHVsZVsnZGVmYXVsdCddOyB9IDpcbiBcdFx0XHRmdW5jdGlvbiBnZXRNb2R1bGVFeHBvcnRzKCkgeyByZXR1cm4gbW9kdWxlOyB9O1xuIFx0XHRfX3dlYnBhY2tfcmVxdWlyZV9fLmQoZ2V0dGVyLCAnYScsIGdldHRlcik7XG4gXHRcdHJldHVybiBnZXR0ZXI7XG4gXHR9O1xuXG4gXHQvLyBPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGxcbiBcdF9fd2VicGFja19yZXF1aXJlX18ubyA9IGZ1bmN0aW9uKG9iamVjdCwgcHJvcGVydHkpIHsgcmV0dXJuIE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChvYmplY3QsIHByb3BlcnR5KTsgfTtcblxuIFx0Ly8gX193ZWJwYWNrX3B1YmxpY19wYXRoX19cbiBcdF9fd2VicGFja19yZXF1aXJlX18ucCA9IFwiXCI7XG5cblxuIFx0Ly8gTG9hZCBlbnRyeSBtb2R1bGUgYW5kIHJldHVybiBleHBvcnRzXG4gXHRyZXR1cm4gX193ZWJwYWNrX3JlcXVpcmVfXyhfX3dlYnBhY2tfcmVxdWlyZV9fLnMgPSAzKTtcbiIsImNocm9tZS5ydW50aW1lLm9uSW5zdGFsbGVkLmFkZExpc3RlbmVyKChkZXRhaWxzKSA9PiB7XHJcblx0aWYgKGRldGFpbHMucmVhc29uID09PSAnaW5zdGFsbCcpIHtcclxuXHRcdGNocm9tZS5ydW50aW1lLm9wZW5PcHRpb25zUGFnZSgpO1xyXG5cdH0gZWxzZSBpZiAoZGV0YWlscy5yZWFzb24gPT09ICd1cGRhdGUnKSB7XHJcblx0XHRjb25zdCB0aGlzVmVyc2lvbiA9IGNocm9tZS5ydW50aW1lLmdldE1hbmlmZXN0KCkudmVyc2lvbjtcclxuXHRcdGNvbnN0IG5ld0ZlYXR1cmVzID0gJ1xcbiAtIHNtYWxsIGZpeGVzIFxcbiAtIG1vdmVkIGludG8gVHlwZVNjcmlwdCc7XHJcblx0XHRjb25zdCBzdGF0dXNNc2cgPSBgR2l0SHViIEdsb2MgdXBkYXRlZCBmcm9tICR7ZGV0YWlscy5wcmV2aW91c1ZlcnNpb259IHRvICR7dGhpc1ZlcnNpb259LlxyXG5cdFx0XHQke25ld0ZlYXR1cmVzfWA7XHJcblxyXG5cdFx0Y29uc29sZS5pbmZvKHN0YXR1c01zZyk7XHJcblx0fVxyXG59KTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+'use strict';
+
+chrome.runtime.onInstalled.addListener(function() {
+ 
+    console.log("Entry Point of the extension");
+
+    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+      var url = tabs[0].url;
+      //here we have the url
+      console.log(url);
+    });
+    var db = setupDatabase();
+    if (db) {
+        alert('db ' + db);
+
+
+       /*
+        //Testing insert
+        var userId = '1';
+        var correlationId = '1';
+        var ipAddress = '1';
+        var searchSentence = '1';
+        var searchResult = '1';
+        var searchOcurrencies = '1';
+        var searchDatetime = '1';
+        insert(userId, correlationId, ipAddress, searchSentence, searchResult, searchOcurrencies, db, function(transaction, result) {
+            alert('result ' + result);
+        });
+*/
+
+        /*
+         //Testing select        
+         select(db, function(transaction, result) {
+             var output = '';
+            for(var i=0; i<result.rows.length; i++) {
+                var row = result.rows.item(i)
+                debugger;
+                output += '<tr><td>' + row['ID'] + '</td><td>' + row['USER_ID'] + '</td><td>' + row['SEARCH_SENTENCE'] + '</td><td>' + row['SEARCH_DATETIME'] + '</td></tr>';
+                alert(output);
+            }
+        });
+*/
+    }
+
+});
+
+function setupDatabase() {
+    try {
+        if (!window.openDatabase) {
+            alert('not supported');
+            return null;
+        }
+        else {
+            var shortName = 'mydatabase';
+            var version = '1.0';
+            var displayName = 'My Important Database';
+            var maxSize = 65536; // in bytes
+            var db = openDatabase(shortName, version, displayName, maxSize);
+            db.transaction(createTables);
+            return db;
+        }
+    } 
+    catch (e) {
+        // Error handling code goes here.
+        if (e == 2) {
+            // Version number mismatch.
+            alert("Invalid database version.");
+        } else {
+            alert("Unknown error " + e + ".");
+        }
+        return null;
+    }
+    alert("Database is: "+db);
+};
+
+function select(db, successCallback) {
+    var query = selectQueryBuilder();
+    db.transaction(
+        function(transaction) {
+            transaction.executeSql(
+                  query
+                , []
+                , successCallback
+                , errorHandler    
+            );
+        }
+    );
+};
+
+function insert(userId, correlationId, ipAddress, searchSentence, searchResult, searchOcurrencies, db, successCallback) {
+    var query = insertQueryBuilder(userId, correlationId, ipAddress, searchSentence, searchResult, searchOcurrencies);
+    debugger;
+    db.transaction(
+        function(transaction) {
+            transaction.executeSql(
+                  query
+                , []
+                , successCallback
+                , errorHandler
+            );
+        }
+    );
+};
+
+function createTables(t) {
+    t.executeSql(CREATE_TABLE_INTERACTION_QUERY, [], dataHandler, errorHandler);
+};
+
+function dataHandler(transaction, results) {
+    debugger;
+};
+
+function errorHandler(transaction, error) {
+    // error.message is a human-readable string.
+    // error.code is a numeric error code
+    alert('Oops.  Error was ' + error.message + ' (Code ' + error.code + ')');
+
+    // Handle errors here
+    var we_think_this_error_is_fatal = true;
+    if (we_think_this_error_is_fatal) return true;
+    return false;
+};
+
+const CREATE_TABLE_INTERACTION_QUERY = "CREATE TABLE IF NOT EXISTS INTERACTIONS"
+    + "(ID INTEGER PRIMARY KEY AUTOINCREMENT"
+    + ", USER_ID INTEGER"
+    + ", CORRELATION_ID TEXT"
+    + ", IP_ADDRESS	TEXT"
+    + ", SEARCH_SENTENCE TEXT"
+    + ", SEARCH_RESULT BLOB"
+    + ", SEARCH_OCURRENCIES	BLOB"
+    + ", SEARCH_DATETIME TEXT);";
+
+function selectQueryBuilder() {
+    return 'SELECT * FROM INTERACTIONS;'
+};
+
+function insertQueryBuilder(userId, correlationId, ipAddress, searchSentence, searchResult, searchOcurrencies) {
+    var date = new Date();
+    debugger;
+    return `INSERT INTO INTERACTIONS`
+        + `(USER_ID, CORRELATION_ID, IP_ADDRESS, SEARCH_SENTENCE, SEARCH_RESULT, SEARCH_OCURRENCIES, SEARCH_DATETIME)`
+        + ` VALUES (${userId}, ${correlationId}, '${ipAddress}', '${searchSentence}', ${searchResult}, ${searchOcurrencies}, '${(new Date()).toISOString()}')`;
+};
