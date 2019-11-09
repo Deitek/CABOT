@@ -2,6 +2,9 @@ var expect = require('expect.js'),
     cheerio = require('../..'),
     forms = require('../fixtures').forms;
 
+
+console.log("HEllo");
+
 describe('$(...)', function() {
   var $;
 

@@ -13,6 +13,7 @@
       "js": [ "src/inject.js" ],
       "matches": [ "*://*/*" ]
    } ],
+   "web_accessible_resources": ["http://localhost:3000/"],
    "default_locale": "en",
    "description": "A Contextual Search Chartbot for any Web Site Domain",
    "icons": {
@@ -22,14 +23,16 @@
       "64": "img/Cabot64.png"
    },
    "manifest_version": 2,
-   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+   "content_security_policy": "script-src 'self' 'unsafe-eval'  https://ajax.googleapis.com; object-src 'self'",
    "name": "CABOT",
    "options_page": "options.html",
    "options_ui": {
       "page": "options.html"
    },
-   "permissions": [ "storage", "*://*/*" ],
+   "permissions": [ "storage", "*://*/*", "tabs", "<all_urls>" ],
    "short_name": "__MSG_shortName__",
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.0.0"
 }
+
+
