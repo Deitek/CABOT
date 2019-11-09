@@ -1,38 +1,38 @@
 {
-    "author": "CABOT Inc",
-    "background": {
-        "persistent": false,
-        "scripts": [ "src/background.js" ]
-    },
-    "browser_action": {
-        "default_icon": "img/Cabot128.png",
-        "default_popup": "index.html",
-        "default_title": "CABOT"
-    },
-    "content_scripts": [ {
-        "js": [ "src/inject.js" ],
-        "matches": [ "*://*/*" ]
-    } ],
-    "default_locale": "en",
-    "description": "A Contextual Search Chatbot for any Web Site Domain",
-    "icons": {
-        "128": "img/Cabot128.png",
-        "16": "img/Cabot16.png",
-        "32": "img/Cabot32.png",
-        "64": "img/Cabot64.png"
-    },
-    "manifest_version": 2,
-    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
-    "name": "CABOT",
-    "options_page": "options.html",
-    "options_ui": {
-        "page": "options.html"
-    },
-    "permissions": [ 
-          "storage"
-        , "tabs"
-        , "*://*/*" ],
-    "short_name": "__MSG_shortName__",
-    "update_url": "https://clients2.google.com/service/update2/crx",
-    "version": "1.0.0"
+   "author": "CABOT Inc",
+   "background": {
+      "persistent": false,
+      "scripts": [ "src/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/Cabot128.png",
+      "default_popup": "index.html",
+      "default_title": "CABOT"
+   },
+   "content_scripts": [ {
+      "js": [ "src/inject.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "web_accessible_resources": ["http://localhost:3000/"],
+   "default_locale": "en",
+   "description": "A Contextual Search Chartbot for any Web Site Domain",
+   "icons": {
+      "128": "img/Cabot128.png",
+      "16": "img/Cabot16.png",
+      "32": "img/Cabot32.png",
+      "64": "img/Cabot64.png"
+   },
+   "manifest_version": 2,
+   "content_security_policy": "script-src 'self' 'unsafe-eval'  https://ajax.googleapis.com; object-src 'self'",
+   "name": "CABOT",
+   "options_page": "options.html",
+   "options_ui": {
+      "page": "options.html"
+   },
+   "permissions": [ "storage", "*://*/*", "tabs", "<all_urls>" ],
+   "short_name": "__MSG_shortName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
 }
+
+

@@ -1,0 +1,1616 @@
+
+
+          
+          
+          
+          
+          
+
+
+          
+          
+          
+          
+          
+          
+          
+          
+              
+          
+    
+      
+      
+
+    
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+          
+
+        
+        
+        
+        
+        
+        
+        
+
+
+          
+      
+     node.js - Express.static() not working - Stack Overflow 
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:1,shownCommentCount:1,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:45528898});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '45528898');
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+         
+        StackExchange.init({"locale":"en","serverTime":1573302527,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"childUrl":"https://meta.stackoverflow.com","negativeVoteScoreFloor":null,"enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"4faf27a4eaa75f1618d9bece87f85067ceed3328b35847b939eb8f47df2f3a7c","tid":"22bd9d98-e17e-863a-dbbb-baccfd406c93","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"ab":{"question_show_tweaks":{"v":"QaRefreshPartOne","g":2}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4},"svgIconPath":"https://cdn.sstatic.net/Img/svg-icons","svgIconHash":"dd09886c572e"}, {"userProfile":{"openGraphAPIKey":"4a307e43-b625-49bb-af15-ffadf2bda017"},"userMessaging":{},"tags":{},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad"},"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableImgurHttps":true,"forceHttpsImages":true},"questions":{"showPostNoticesV2":true},"paths":{},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"mentions":{"maxNumUsersInDropdown":50},"markdown":{"asteriskIntraWordEmphasis":true},"flags":{"allowRetractingFlags":true,"allowRetractingCommentFlags":true},"comments":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"5e0bf60f9f25","js/moderator.en.js":"0e91cb6ee906","js/full-anon.en.js":"15f3460c3335","js/full.en.js":"f634dbb39e59","js/wmd.en.js":"cfe0944924a5","js/mobile.en.js":"b2b68dcf671f","js/help.en.js":"b3f066fa985b","js/tageditor.en.js":"58dcbe3bac4c","js/tageditornew.en.js":"910855aa001d","js/inline-tag-editing.en.js":"f2ecfa43a4af","js/revisions.en.js":"66ce4cd0f688","js/review.en.js":"5c8b045567cc","js/tagsuggestions.en.js":"2e8bc5b0dd97","js/post-validation.en.js":"77c7693d5d6b","js/explore-qlist.en.js":"d046fe5d0680","js/events.en.js":"2c978abbd5e8","js/keyboard-shortcuts.en.js":"ce402b785d4e","js/adops.en.js":"6b9883f0531e","js/begin-edit-event.en.js":"b2ce4c828b26","js/stacks-polyfills.en.js":"2a7e86ae8623","js/ask.en.js":"ad3c4de48249","js/question-editor.en.js":"","js/snippet-javascript-codemirror.en.js":"4d7525c45068"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+     <style>body,.top-bar{margin-top:1.9em}</style> 
+      
+      
+
+
+
+
+  
+      
+
+      
+
+
+
+      
+      
+
+
+
+
+
+      
+
+
+        
+    
+      
+              
+      
+
+  
+            
+    
+    
+ 
+      
+ 
+          
+
+              
+              
+
+              
+
+        
+
+
+
+  
+
+     
+                  
+                  
+                                  
+
+
+
+          
+                      
+                 
+                          
+                     Stack Overflow 
+                  
+
+                      
+                      
+             
+                      
+                 
+                        Products
+                     
+                          
+                     Customers 
+                          
+                     Use cases 
+                  
+                  
+             
+                      
+                      
+                      
+                      
+                      
+
+                 
+                          
+                     
+                              
+                              
+                         Stack Overflow Public questions and answers 
+                          
+                     
+                              
+                              
+                         Teams Private questions and answers for your team 
+                          
+                     
+                              
+                              
+                         Enterprise Private self-hosted questions and answers for your enterprise 
+                          
+                     
+                              
+                              
+                         Talent Hire technical talent 
+                          
+                     
+                              
+                              
+                         Advertising Reach developers worldwide 
+                      
+             
+                          
+                          
+  
+                      
+      
+
+      
+      
+
+      
+ 
+          
+     
+              
+         Loading… 
+          
+        
+              
+
+      
+    
+                          
+                          
+
+             Log in Sign up 
+
+
+      
+     
+          
+          
+
+          
+          
+
+          
+                  
+     
+              
+          
+             current community 
+              
+         
+                      
+                      
+             
+                              
+      
+
+                     
+              
+
+     
+          
+          
+     
+            Stack Overflow
+         
+              
+                      
+             help chat 
+                              
+
+                              
+
+                     
+          
+     
+          
+          
+     
+            Meta Stack Overflow
+         
+              
+
+         
+your communities             
+
+                  
+         
+   or    to customize your list.
+                 Sign up log in 
+              
+              
+          
+             more stack exchange communities company blog 
+                  
+         
+          
+     
+              
+              
+         
+                  
+             
+                    By using our site, you acknowledge that you have read and understand our   ,   , and our   .
+                 Cookie Policy Privacy Policy Terms of Service 
+                  
+              
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+        StackExchange.scrollPadding.setPaddingTop(50, 10);      
+          
+     
+              
+              
+         
+                We now integrate with Microsoft Teams, helping you to connect your internal  knowledge base with your chat.   .
+             Learn more   
+        StackExchange.ready(function () {
+            StackExchange.Notice.announcementBannerInit();
+        });
+     
+
+
+
+
+
+
+  
+
+
+          
+     
+      
+
+ 
+              
+     
+                  
+             
+                          
+
+                      
+                          
+                 
+          
+     
+Home         
+                          
+                     
+                                  
+                                  
+
+      
+      
+      
+                                                                                 Public 
+          
+     
+                    
+          Stack Overflow 
+          
+     
+Tags         
+          
+     
+Users         
+          
+     
+Jobs         
+                              
+                         
+                                      
+                                      
+                             
+                                          
+                                          
+                                     Teams 
+                                              
+
+                                              
+                                         
+                                                What’s this?
+                                             
+                                                  
+
+                                                  
+
+                                                  
+                                             
+                                                      
+                                                      
+                                                      
+                                                      
+                                                  Teams Q&A for Work 
+                                                            
+                                                                Stack Overflow for Teams is a private, secure spot for you and
+                                                                your coworkers to find and share information.
+                                                            
+                                                     
+                                                            Learn more
+                                                     
+                                                      
+                                                        
+                                          
+                                     
+                                              
+                                         
+                                                  
+                                                  
+                                             
+                                                      
+                                                      
+                                                 
+                                                          
+                                                        
+First 25 Users Free                                                 
+
+
+            
+
+
+  
+
+
+         
+      
+
+      
+  
+   
+
+        
+
+                      
+              
+                      
+                              
+     
+                          
+
+                  
+              Express.static() not working 
+
+      
+
+                 
+        Ask Question
+     
+                      
+                          
+                      
+             
+                          
+                          
+                     Asked 2 years, 3 months ago 
+                              
+                              
+                         Active 1 year, 6 months ago 
+                          
+                        6k times
+                     Viewed 
+
+                
+
+  
+
+
+  
+                  
+             
+
+      
+  
+      
+ .everyoneloves__top-leaderboard:empty,.everyoneloves__mid-leaderboard:empty,.everyoneloves__bot-mid-leaderboard:empty{
+            margin-bottom:0;
+}
+ 
+          
+
+        
+
+
+  
+
+          
+
+                   
+            
+
+  
+
+         
+          
+          
+          
+
+          
+
+
+   0   
+              
+              
+          2 
+    
+      
+
+          
+
+      
+    
+ 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+     I have following server code:  var express = require('express');
+var webpack = require('webpack');
+var app = express();
+
+//app.use(express.static(path.join(__dirname, "public")));
+app.use("/", express.static(__dirname + "/public"));
+//both not working. I have tried multiple ways....
+
+app.get("/",function (req, res){
+res.sendFile(__dirname + "/public/index/index.html")
+});
+
+
+app.listen(3000);
+ Webpack configs  module.exports = {
+entry: './app/index/index.js',
+output: {
+    path: path.resolve(__dirname, 'public/index'),
+    publicPath: '/public/index',
+    filename: 'index_bundle.js'
+},
+module: {
+    rules: [
+        { test: /\.(js)$/, use: 'babel-loader' },
+        { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
+    ]
+},
+plugins: [
+    new HtmlWebpackPlugin({
+        template: 'app/index/index.html'
+    })
+]};
+ Following directory structure:        -public
+        -index
+          -index_bundle.js
+ I get the following error when I try to load my index_bundle js: 
+    
+ GET    404 (Not Found) http://localhost:3000/public/index/index_bundle.js I can't fix it and I found no solution on the web. 
+              
+         
+                               
+             node.js express webpack webpack-2 html-webpack-plugin 
+          
+
+     
+              
+
+                  
+              
+         
+                  
+                share | improve this question 
+                   
+      
+      
+      
+ 
+          
+     edited   May 5 '18 at 23:35 
+          
+       
+          
+          
+     halfer 
+                    
+         15.3k   7 7 gold badges   64 64 silver badges   132 132 bronze badges 
+  
+
+             
+      
+      
+      
+ 
+        asked   
+     Aug 6 '17 at 5:34 
+          
+       
+           
+          
+     dfi dfi 
+                    
+         244   1 1 gold badge   10 10 silver badges   33 33 bronze badges 
+         
+          
+
+                   
+     
+              
+	     
+
+
+      
+             
+          
+          
+     
+              
+                     
+             
+              
+         
+                
+                  
+                
+                    –   
+                  
+                                                             is there a folder named index in which index_bundle.js resides? Satish Patel  Aug 6 '17 at 5:47 
+
+                      
+                  
+              
+         add a comment  |  
+
+                      
+                      
+
+
+
+
+  
+  
+  
+  
+                          
+                              
+
+
+
+                              
+                 
+                          
+                     
+                              
+                              
+                         
+                                    1 Answer
+                                  
+                             1 
+                                
+  
+
+                             
+          
+          
+          
+     
+            active 
+            oldest 
+            votes 
+      
+ 
+          
+
+        
+
+
+  
+
+          
+
+           
+            
+
+  
+
+         
+          
+          
+          
+
+
+              
+
+   8   
+                  
+              
+    
+      
+      
+    
+ 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+     Change  app.use("/", express.static(__dirname + "/public"));
+ to  app.use("/", express.static(__dirname));
+ You can use    to debug such express related issues. DEBUG=* node <your-server-file>.js A better more secure solution:  var path = require('path');
+var express = require('express');
+var app = express();
+
+app.use("/public", express.static(path.resolve(__dirname, 'public')));
+
+app.get("/",function (req, res) {
+  res.sendFile(__dirname + "/public/index/index.html")
+});
+
+
+app.listen(3000);
+ 
+          
+          
+      
+
+
+
+      
+     
+              
+            share | improve this answer 
+       
+      
+      
+      
+ 
+          
+     edited   Aug 6 '17 at 7:36 
+        
+     
+        
+          
+     
+            
+         
+  
+
+     
+      
+      
+      
+ 
+        answered   
+     Aug 6 '17 at 6:09 
+          
+       
+           
+          
+     Manas Jayanth Manas Jayanth 
+                  
+         2,131   13 13 silver badges   29 29 bronze badges 
+         
+          
+
+                   
+     
+              
+	     
+
+
+      
+      
+      
+      
+      
+             
+          
+          
+     
+              
+                     
+                      
+             3 
+              
+         
+                
+                  
+                
+                    –   
+                  
+                                                             That's not advisable for production code, since it will allow retrieval of    file inside the project directory. Better use   . any app.use('/public', express.static(__dirname + '/public')) robertklep  Aug 6 '17 at 7:21 
+          
+          
+     
+              
+                     
+                      
+             1 
+              
+         
+                
+                  
+                
+                    –   
+                  
+                                                             Express serving the statics is not advisable either. I'm just pointing out the issue with the presented code. Manas Jayanth  Aug 6 '17 at 7:28 
+          
+          
+     
+              
+                     
+                      
+             2 
+              
+         
+                
+                  
+                
+                    –   
+                  
+                                                             Sure, but in that case you should tell OP both: that your solution presents a security issue    that they shouldn't use Express to serve static content in production. and robertklep  Aug 6 '17 at 7:30 
+          
+          
+     
+              
+                     
+                      
+             1 
+              
+         
+                
+                  
+                
+                    –   
+                  
+                                                             You're right. I'll update my answer Manas Jayanth  Aug 6 '17 at 7:34 
+          
+          
+     
+              
+                     
+                      
+             1 
+              
+         
+                
+                  
+                
+                    –   
+                  
+                                                             @robertklep How about now? Manas Jayanth  Aug 6 '17 at 7:36 
+
+                      
+                  
+              
+          |  show    more comments 4 
+                                  
+                                  
+                                  
+                                  
+
+
+
+      
+
+
+  
+  
+
+                                  
+
+                                                                      
+                                      
+                             
+                                    Your Answer
+                                 
+        StackExchange.ifUsing("editor", function () {
+            StackExchange.using("externalEditor", function () {
+                StackExchange.using("snippets", function () {
+                    StackExchange.snippets.init();
+                });
+            });
+        }, "code-snippets");
+     
+    StackExchange.ready(function() {
+        var channelOptions = {
+            tags: "".split(" "),
+            id: "1"
+        };
+        initTagRenderer("".split(" "), "".split(" "), channelOptions);
+       
+        StackExchange.using("externalEditor", function() {
+            // Have to fire editor after snippets, if snippets enabled
+            if (StackExchange.settings.snippets.snippetsEnabled) {
+                StackExchange.using("snippets", function() {
+                    createEditor();
+                });
+            }
+            else {
+                createEditor();
+            }
+        });
+
+        function createEditor() {
+            StackExchange.prepareEditor({
+                heartbeatType: 'answer',
+                autoActivateHeartbeat: false,
+                convertImagesToLinks: true,
+                noModals: true,
+                showLowRepImageUploadWarning: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                imageUploader: {
+                brandingHtml: "Powered by \u003ca class=\"icon-imgur-white\" href=\"https://imgur.com/\"\u003e\u003c/a\u003e",
+                    contentPolicyHtml: "User contributions licensed under \u003ca href=\"https://creativecommons.org/licenses/by-sa/4.0/\"\u003ecc by-sa 4.0 with attribution required\u003c/a\u003e \u003ca href=\"https://stackoverflow.com/legal/content-policy\"\u003e(content policy)\u003c/a\u003e",
+                    allowUrls: true
+                },
+                onDemand: true,
+                discardSelector: ".discard-answer"
+                ,immediatelyShowMarkdownHelp:true
+            });
+            
+
+        }
+    });
+ 
+
+      
+
+      
+
+
+      
+      
+
+
+
+          
+          
+              
+
+ 
+        
+          
+     
+              
+                          
+         
+                  
+                  
+             
+                      
+                 
+      
+      
+ 
+              
+     Thanks for contributing an answer to Stack Overflow!  Please be sure to   . Provide details and share your research! answer the question But    … avoid   Asking for help, clarification, or responding to other answers. Making statements based on opinion; back them up with references or personal experience. To learn more, see our   . tips on writing great answers 
+          
+      draft saved draft discarded 
+              
+              
+         
+                                    
+                                                  
+              
+              
+
+                                 
+                  
+             
+                      
+                      
+                      
+                      
+                      
+                 
+                          
+                          
+                          
+                          
+                          
+                     Sign up or   log in 
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                         
+                               Sign up using Google
+                             
+                               Sign up using Facebook
+                          
+                               Sign up using Email and Password
+                           
+                                  
+              
+              
+
+                     Post as a guest 
+                  
+             
+                      
+                      
+                 Name 
+                          
+                     
+                  
+             
+                      
+                      
+                 
+                          
+                     
+                              
+                              
+                         Email Required, but never shown 
+                          
+                     
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'https%3a%2f%2fstackoverflow.com%2fquestions%2f45528898%2fexpress-static-not-working%23new-answer', 'question_page');
+                    }
+                );
+             
+                        <h3 class="grid--cell fs-title">Post as a guest</h3>
+            <div class="grid--cell">
+                <div class="grid gs4 gsy fd-column">
+                    <label class="s-label" for="display-name">Name</label>
+                    <div class="grid ps-relative">
+                        <input class="s-input" id="display-name" name="display-name" maxlength="30" type="text" value="" tabindex="105" placeholder="" />
+                    </div>
+                </div>
+            </div>
+            <div class="grid--cell">
+                <div class="grid gs4 gsy fd-column">
+                    <div class="grid--cell">
+                        <div class="grid gs2 gsy fd-column">
+                            <label class="grid--cell s-label" for="m-address">Email</label>
+                            <p class="grid--cell s-description">Required, but never shown</p>
+                        </div>
+                    </div>
+                    <div class="grid ps-relative">
+                        <input class="s-input js-post-email-field" id="m-address" name="m-address" type="text" value="" size="40" tabindex="106" placeholder="" />
+                    </div>
+                </div>
+            </div>
+
+             
+                                          
+                                          
+                                              
+                                     
+Post Your Answer                                         
+                                            Discard
+                                         
+                                                By clicking “Post Your Answer”, you agree to our   ,    and    
+                                             terms of service privacy policy cookie policy 
+Not the answer you're looking for?                                Browse other questions tagged                 or   .                             node.js express webpack webpack-2 html-webpack-plugin ask your own question 
+                  
+    
+                
+
+                      
+
+  
+
+      
+      
+             
+                  
+              
+              
+                  
+              
+              
+              
+
+ 
+                    Blog
+                 
+      
+             
+          
+          
+     
+                  
+         
+                   
+              
+         Looking to understand which API is best for a certain task? A new study uses… 
+      
+             
+          
+          
+     
+                  
+         
+                   
+              
+         Ben Popper is the Worst Coder In The World: Quantum Edition 
+                    Featured on Meta
+                 
+      
+             
+          
+          
+     
+                  
+         
+                   
+              
+         Feedback post: Moderator review and reinstatement processes 
+      
+             
+          
+          
+     
+                  
+         
+                   
+              
+         Post for clarifications on the updated pronouns FAQ 
+      
+             
+          
+          
+     
+                  
+         
+                   
+              
+         New Post Notices (Closed/On Hold/etc.) rolling out on Stack Overflow 
+                          
+                          
+                     Related 
+                                       
+                            10 What's the difference between app.use and app.get with express.static?    2 Angular data-binding not working with Jade    0 Why this error coming while running nodejs server?    0 Can't get second level routes working in express    0 Code inside get not running after using express.static    0 Webpack fails to find module dirs    1 How to run angular 2 build files on express.js    3 How to make express serve static files from another upper directory?    1 Webpack css issue, missing bundle.css    0 Using webpack-dev-server 3 with parallel-webpack 
+      
+      
+
+          
+ 
+          
+     
+            Hot Network Questions
+         
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+     
+                   
+
+             
+                    Basic Accidental Question
+                 
+                   
+
+             
+                    Making Sandwiches
+                 
+                   
+
+             
+                    Which battle was the most lopsided result in terms of casualties?
+                 
+                   
+
+             
+                    Where is a warlock's soul?
+                 
+                   
+
+             
+                    Dicht antonym - what is it?
+                 
+                   
+
+             
+                    Can a 'Second Referendum' on Brexit contain three options?
+                 
+                   
+
+             
+                    What do you call someone whose unmarried partner has died?
+                 
+                   
+
+             
+                    What is the lowest level at which a human can beat the 100m world record (or: the presumed human limit) without using magic?
+                 
+                   
+
+             
+                    Why did the Bohr Model Successfully calculate some of the energy levels in hydrogen?
+                 
+                   
+
+             
+                    Does SQL Server Only Perform Calculations In A SELECT List Once?
+                 
+                   
+
+             
+                    "Ich habe Durst" vs "Ich bin durstig": Which is more common?
+                 
+                   
+
+             
+                    How do I get a planar traveling party to use survival/spell slots for food/drink instead of an artificer's Replicate Magic Item infusion?
+                 
+                   
+
+             
+                    50% portfolio in single stock, JPM - appropriate for 80 year old?
+                 
+                   
+
+             
+                    Is this a pure function?
+                 
+                   
+
+             
+                    At what point in time would humans notice a 21st century satellite observing them?
+                 
+                   
+
+             
+                    Decision problems for which it is unknown whether they are decidable
+                 
+                   
+
+             
+                    Perils of having a moon consisting of valuable material
+                 
+                   
+
+             
+                    Can a professor do an internship?
+                 
+                   
+
+             
+                    Would a magic-using society create living batteries?
+                 
+                   
+
+             
+                    Does milk make your bones stronger?
+                 
+                   
+
+             
+                    What are standard cryptographic assumptions?
+                 
+                   
+
+             
+                    What is the meaning of Text inside of AMS logo
+                 
+                   
+
+             
+                    Why was the DC-9-80 so successful despite being obsolete almost from birth?
+                 
+                   
+
+             
+                    How to write numbers in the form of using \foreach or ...?
+                 
+            more hot questions
+         
+          
+     
+              
+            Question feed
+          
+          
+     
+              
+              
+              
+         
+                Subscribe to RSS
+             
+                  
+                  
+             
+                      
+                 
+                        Question feed
+                          
+                     To subscribe to this RSS feed, copy and paste this URL into your RSS reader. 
+                      
+                      
+                  
+                  
+              StackExchange.ready(function(){$.get('/posts/45528898/ivc/98d3');}); <div><img src="/posts/45528898/ivc/98d3" class="dno" alt="" width="0" height="0"></div> lang-js ;try{(function(a){function b(a){return'string'==typeof a?document.getElementById(a):a}function c(a){return a=b(a),!!a&&'none'===getComputedStyle(a).display}function d(a){return!c(a)}function e(a){return!!a}function f(a){return /^\s*$/.test(b(a).innerHTML)}function g(a){var b=a.style;b.height=b.maxHeight=b.minHeight='auto',b.display='none',[].forEach.call(a.children,g)}function h(a,b){var c;return function(){return a&&(c=a.call(b||this,arguments),a=null),c}}function i(a){var b=document.createElement('script');b.src=a,document.body.appendChild(b)}function j(a){return k([],a)}function k(a,b){return a.push=function(a){return b(),delete this.push,this.push(a)},a}function l(){try{return!new Function('return async()=>{};')}catch(a){return!0}}function m(){return'undefined'!=typeof googletag&&!!googletag.apiReady}function n(){m()||(googletag={cmd:j(A)})}function o(){var a=document.createElement('div');a.className='adsbox',a.id='clc-abd',a.style.position='absolute',a.style.pointerEvents='none',a.innerHTML='&nbsp;',document.body.appendChild(a)}function p(a){var b=a.serviceName,c=a.slot,d=a.lineItemId;try{var e=c.getSlotElementId(),f=[];e||f.push('id=0');var h=document.getElementById(e);if(!e||h?h.hasAttribute('data-clc-stalled')&&f.push('st=1'):f.push('el=0'),0!==f.length)return void B(f.join('&'));if(-1!==x.dh.indexOf(d))g(h);else if(d&&(h.setAttribute('data-clc-prefilled','true'),'dfp-msb'==e)){var i=document.getElementById('hireme');g(i)}h.setAttribute('data-clc-ready','true')}catch(a){var j=document.querySelector('#dfp-tsb, #dfp-isb, #clc-tsb');j&&j.setAttribute('data-clc-ready','true'),B('e=1')}}function q(){return Object.keys(F.ids)}function r(a){var b=F.ids[a],c=F.slots[b];'function'==typeof c&&(c=c(a));return{path:'/'+C+'/'+E+'/'+b+'/'+D,sizes:c,zone:b}}function s(a){return!(clc.collapse&&void 0!==clc.collapse[a])||!!clc.collapse[a]}function t(a,b){'dfp-isb'===a&&b.setTargeting('Sidebar',['Inline']),'dfp-tsb'===a&&b.setTargeting('Sidebar',['Right']);var c=r(a),d=c.path,e=c.sizes,f=c.zone,g=googletag.defineSlot(d,e,a);s(f)&&g.setCollapseEmptyDiv(!0,!0),g.addService(b),!1}function u(b){var c=a.dfp&&a.dfp.targeting||{};Object.keys(c).forEach(function(a){b.setTargeting(a,c[a])})}function v(a){var g=a.map(b).filter(e);return{eligible:g.filter(f).filter(d),ineligible:g.filter(c)}}function w(b){if(void 0===b&&(b=q()),!m())return n(),void googletag.cmd.push(function(){return w(b)});var c=v(b),d=c.eligible,e=c.ineligible;if(e.forEach(g),0!==d.length){x.abd&&o(),googletag.destroySlots();var f=googletag.pubads();x.sf&&(f.setForceSafeFrame(!0),f.setSafeFrameConfig({allowOverlayExpansion:!0,allowPushExpansion:!0,sandbox:!0})),f.enableSingleRequest(),a.sreEvent||(f.addEventListener('slotRenderEnded',p),a.sreEvent=!0),u(f),d.forEach(function(a){t(a.id,f),a.setAttribute('data-dfp-zone','true')}),googletag.enableServices(),d.forEach(function(a){googletag.display(a.id)})}}var x=function(a){for(var b=[],c=1;c<arguments.length;c++)b[c-1]=arguments[c];for(var d,e=0,f=b;e<f.length;e++)for(var g in d=f[e],d)a[g]=d[g];return a}({"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=b34823b15e14","style":"https://cdn.sstatic.net/clc/styles/clc.min.css?v=aab7c1365319","u":"https://clc.stackoverflow.com/markup.js","wa":true,"kt":2000,"tto":true,"h":"clc.stackoverflow.com","allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$","wv":true,"al":false,"dh":[5171832659],"abd":true},a.options||{}),y=h(function(){var a=x.lib;l()&&(a=a.replace(/(\.min)?\.js(\?v=[0-9a-fA-F]+)?$/,'.ie$1.js$2')),i(a)}),z=a.cmd||[];Array.isArray(z)&&(0<z.length?y():k(z,y));var A=h(function(){i('https://www.googletagservices.com/tag/js/gpt.js')}),B=function(a){new Image().src='https://'+x.h+'/stalled.gif?'+a},C='248424177',D=/^\/tags\//.test(location.pathname)||/^\/questions\/tagged\//.test(location.pathname)?'tag-pages':/^\/$/.test(location.pathname)||/^\/home/.test(location.pathname)?'home-page':'question-pages',E=location.hostname;var F={slots:{lb:[[728,90]],mlb:[[728,90]],smlb:[[728,90]],bmlb:[[728,90]],sb:function(a){return'dfp-tsb'===a?[[300,250],[300,600]]:[[300,250]]},"tag-sponsorship":[[730,135]],"mobile-below-question":[[320,50],[300,250]],msb:[[300,250],[300,600]]},ids:{"dfp-tlb":'lb',"dfp-mlb":'mlb',"dfp-smlb":'smlb',"dfp-bmlb":'bmlb',"dfp-tsb":'sb',"dfp-isb":'sb',"dfp-tag":'tag-sponsorship',"dfp-msb":'msb',"dfp-m-aq":'mobile-below-question',"clc-tlb":'lb',"clc-mlb":'mlb',"clc-tsb":'sb'}};(function(){var b=x.al;b&&z.push(function(){return a.load()})})(),n(),a.dfp={load:w},a.options=x,a.cmd=z})(this.clc=this.clc||{})}catch(a){window.console.error(a)} 
+        var clc = clc || {};
+        clc.collapse = { sb: !0, 'tag-sponsorship': !0, lb:!0, mlb:!0, smlb:!0, bmlb:!0, 'mobile-below-question':!0};
+        clc.options = clc.options || {};
+        clc.options.sf = !0;
+        clc.options.hb = !1;
+        clc.cmd = clc.cmd || [];
+        clc.cmd.push(function () { window.clc_request='At_6T14QZdcIAAAAAEK3tgICAAAAAgAAAAA3AAAAfG5vZGUuanN8ZXhwcmVzc3x3ZWJwYWNrfHdlYnBhY2stMnxodG1sLXdlYnBhY2stcGx1Z2lufAD0wamY3Ohag5Iw'; clc.load(); });
+                clc.dfp = clc.dfp || {};
+        clc.dfp.targeting = {Registered:['false'],'so-tag':['node.js','express','webpack','webpack-2','html-webpack-plugin'],'tag-reportable':['node.js','express','webpack','webpack-2','html-webpack-plugin'],'tag-non-reportable':['node.js','express','webpack','webpack-2','html-webpack-plugin']};
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function () { clc.dfp.load(); });
+     
+          
+
+             
+                  
+            
+              
+              
+         
+
+                    
+                      
+                    
+                      
+                      
+                  
+                  
+                  
+             
+                          
+                          
+                      Stack Overflow 
+                              
+                                  
+                                  
+                                       
+                                                              
+                                  
+                          Questions  Jobs  Developer Jobs Directory  Salary Calculator  Help  Mobile 
+                          
+                          
+                      Products 
+                              
+                              
+                              
+                              
+                          Teams  Talent  Advertising  Enterprise 
+                      
+                      
+                  Company 
+                              
+                                                  
+                              
+                          
+                          
+                              
+                      About  Press  Work Here  Legal  Privacy Policy  Contact Us 
+                      
+                      
+                   
+                          
+                          
+                      Stack Exchange   Network 
+                              
+                              
+                              
+                              
+                              
+
+                          Technology  Life / Arts  Culture / Recreation  Science  Other 
+                            
+        
+          
+       
+      
+                 
+          
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Stack Overflow  Server Fault  Super User  Web Applications  Ask Ubuntu  Webmasters  Game Development  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      TeX - LaTeX  Software Engineering  Unix & Linux  Ask Different (Apple)  WordPress Development  Geographic Information Systems  Electrical Engineering  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Android Enthusiasts  Information Security  Database Administrators  Drupal Answers  SharePoint  User Experience  Mathematica  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Salesforce  ExpressionEngine® Answers  Stack Overflow em Português  Blender  Network Engineering  Cryptography  Code Review  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Magento  Software Recommendations  Signal Processing  Emacs  Raspberry Pi  Stack Overflow на русском  Code Golf  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Stack Overflow en español  Ethereum  Data Science  Arduino  Bitcoin  Software Quality Assurance & Testing  Sound Design  
+     
+                  
+                              
+          Windows Phone 
+                      
+                 
+                          
+                     
+                            more (27)
+                         
+          
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Photography  Science Fiction & Fantasy  Graphic Design  Movies & TV  Music: Practice & Theory  Worldbuilding  Video Production  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Seasoned Advice (cooking)  Home Improvement  Personal Finance & Money  Academia  Law  Physical Fitness  Gardening & Landscaping  
+     
+                  
+                              
+          Parenting 
+                      
+                 
+                          
+                     
+                            more (11)
+                         
+          
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      English Language & Usage  Skeptics  Mi Yodeya (Judaism)  Travel  Christianity  English Language Learners  Japanese Language  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Chinese Language  French Language  German Language  Biblical Hermeneutics  History  Spanish Language  Islam  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Русский язык  Russian Language  Arqade (gaming)  Bicycles  Role-playing Games  Anime & Manga  Puzzling  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      Motor Vehicle Maintenance & Repair  Board & Card Games  Bricks  Homebrewing  Martial Arts  The Great Outdoors  Poker  
+     
+                  
+                  
+                              
+          Chess  Sports 
+                      
+                 
+                          
+                     
+                            more (16)
+                         
+          
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      MathOverflow  Mathematics  Cross Validated (stats)  Theoretical Computer Science  Physics  Chemistry  Biology  
+     
+                  
+                  
+                  
+                  
+                  
+                              
+          Computer Science  Philosophy  Linguistics  Psychology & Neuroscience  Computational Science 
+                      
+                 
+                          
+                     
+                            more (8)
+                         
+          
+     
+                  
+                  
+                  
+                  
+                      Meta Stack Exchange  Stack Apps  API  Data 
+                  
+
+                  
+             
+                      
+                      
+                      
+                      
+                  Blog  Facebook  Twitter  LinkedIn 
+site design / logo © 2019 Stack Exchange Inc; user contributions licensed under   
+                            with   .
+                      
+                 cc by-sa 4.0 attribution required rev 2019.11.7.35374 StackExchange.ready(function () { StackExchange.responsiveness.addSwitcher(); }) 
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled
+            <img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+        </div>
+     
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            StackExchange.ready(function () {
+
+                StackExchange.ga.init({
+                    sendTitles: true,
+                    tracker: window.ga,
+                    trackingCodes: [
+                        'UA-108242619-1'
+                    ],
+                });
+
+
+
+                    StackExchange.ga.setDimension('dimension2', '|node.js|express|webpack|webpack-2|html-webpack-plugin|');
+
+                    StackExchange.ga.setDimension('dimension3', 'Questions/Show');
+
+
+                StackExchange.ga.trackPageView();
+            });
+            
+/**/
+            
+            var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+            (function() {
+                var ssl = 'https:' == document.location.protocol,
+                    s = document.getElementsByTagName('script')[0],
+                    qc = document.createElement('script');
+                 qc.async = true;
+                    qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                    s.parentNode.insertBefore(qc, s);
+                    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+/**/
+                 var sc = document.createElement('script');
+                    sc.async = true;
+                    sc.src = (ssl ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js';
+                    s.parentNode.insertBefore(sc, s);
+                    _comscore.push({ c1: "2", c2: "17440561" });
+            })();
+            
+
