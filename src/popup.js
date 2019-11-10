@@ -14,7 +14,7 @@ function count() {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({url: url, question: document.getElementById('message')})
+            body: JSON.stringify({url: url, question: document.getElementById('message').value})
         });
     
         response.then((x)=> console.log(x)) 
