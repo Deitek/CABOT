@@ -1,7 +1,0 @@
-{
-  "name": "CABOTSQL",
-  "version": "1.0.0",
-  "dependencies": {
-    "sql.js": "^1.0.1"
-  }
-}
