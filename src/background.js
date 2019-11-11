@@ -16,36 +16,7 @@ chrome.runtime.onInstalled.addListener(function() {
     var db = setupDatabase();
     if (db) {
         alert('db ' + db);
-
-
-       /*
-        //Testing insert
-        var userId = '1';
-        var correlationId = '1';
-        var ipAddress = '1';
-        var searchSentence = '1';
-        var searchResult = '1';
-        var searchOcurrencies = '1';
-        var searchDatetime = '1';
-        insert(userId, correlationId, ipAddress, searchSentence, searchResult, searchOcurrencies, db, function(transaction, result) {
-            alert('result ' + result);
-        });
-*/
-
-        /*
-         //Testing select        
-         select(db, function(transaction, result) {
-             var output = '';
-            for(var i=0; i<result.rows.length; i++) {
-                var row = result.rows.item(i)
-                debugger;
-                output += '<tr><td>' + row['ID'] + '</td><td>' + row['USER_ID'] + '</td><td>' + row['SEARCH_SENTENCE'] + '</td><td>' + row['SEARCH_DATETIME'] + '</td></tr>';
-                alert(output);
-            }
-        });
-*/
     }
-
 });
 
 function setupDatabase() {
